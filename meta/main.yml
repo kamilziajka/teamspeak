@@ -1,0 +1,6 @@
+---
+galaxy_info:
+  author: "Kamil Ziajka"
+  description: "Role for deploying TeamSpeak server using Docker service"
+  license: "MIT"
+  min_ansible_version: "2.3.0.0"

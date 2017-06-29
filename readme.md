@@ -40,4 +40,5 @@ TeamSpeak host:
 ```
 
 ## License
+
 [MIT](license.md)
