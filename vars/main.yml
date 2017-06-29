@@ -1,0 +1,5 @@
+---
+_teamspeak_container_data_directory: "/teamspeak3"
+_teamspeak_container_server_port: "9987/udp"
+_teamspeak_container_server_query_port: "10011"
+_teamspeak_container_server_file_transfer_port: "30033"

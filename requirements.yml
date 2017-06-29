@@ -1,0 +1,8 @@
+---
+- src: "https://projects.task.gda.pl/ansible-roles/docker.git"
+  scm: "git"
+  version: "2.2.0"
+
+- src: "https://projects.task.gda.pl/ansible-roles/service.git"
+  scm: "git"
+  version: "1.0.2"

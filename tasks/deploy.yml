@@ -1,0 +1,21 @@
+---
+- name: "ensure that TeamSpeak data directory exists"
+  become: yes
+  file:
+    path: "{{ teamspeak_data_directory }}"
+    state: "directory"
+    mode: 0755
+
+- name: "setup TeamSpeak service"
+  include_role:
+    name: "docker"
+    tasks_from: "service_base"
+  vars:
+    service_name: "{{ teamspeak_service_name }}"
+    docker_service_image: "{{ teamspeak_container_image }}"
+    docker_service_ports:
+      - "{{ teamspeak_server_port }}:{{ _teamspeak_container_server_port }}"
+      - "{{ teamspeak_server_query_port }}:{{ _teamspeak_container_server_query_port }}"
+      - "{{ teamspeak_server_file_transfer_port }}:{{ _teamspeak_container_server_file_transfer_port }}"
+    docker_service_volumes:
+      - "{{ teamspeak_data_directory }}:{{ _teamspeak_container_data_directory }}"
